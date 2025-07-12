@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  </head>
+  <body style="background-color: rgb(94, 94, 94);">
+
+
+
+
+
+<nav  style="position: fixed; z-index: 999; width: 100%; " class="navbar navbar-expand-lg bg-body-tertiary">
+  <div  class="container-fluid">
+    <img width="50" height="50" class="rounded-circle mx-3" src="../images.jpeg" alt="Logo">
+    <a class="navbar-brand nav-border pe-3" href="#">Egypt</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="width: fit-content;" class="nav-link dropdown-toggle rounded border border-primary" href="#" data-bs-toggle="dropdown">
+            Cars
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">BMW</a></li>
+            <li><a class="dropdown-item" href="#">Mercedes</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Audi</a></li>
+            <li><a class="dropdown-item" href="#">Honda</a></li>
+            <li><a class="dropdown-item" href="#">Ford</a></li>
+            <li><a class="dropdown-item" href="#">Chevrolet</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        
+      </ul>
+      
+      <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      
+      <!-- Login Button with Modal -->
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+        Login
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Centered Login Modal -->
+<div class="modal fade " id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header bg-primary" >
+        <h5 class="modal-title " id="loginModalLabel" style="color: white;">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4" >
+        <form>
+          <div class="mb-3">
+            <label for="loginEmail " class="form-label text-primary">Email address</label>
+            
+            <input type="email" class="form-control border-primary" id="loginEmail">
+              <div>We'll never share your email with anyone else. </div>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label text-primary" >Password</label>
+            <input type="password" class="form-control border-primary" id="loginPassword" >
+          </div>
+          <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckChecked" checked>
+  <label class="form-check-label" for="switchCheckChecked">Remember me</label>
+</div>
+          
+        </form>
+      </div>
+      <div class="modal-footer mx-4 justify-content-between">
+        <button type="submit" class="btn btn-outline-primary ">Login</button>
+        
+       <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" aria-label="Close">close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid p-0 m-0">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide w-100" data-bs-ride="carousel">
+    
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"></button>
+    </div>
+
+    <div class="carousel-inner bg-dark text-center">
+
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="./photos/BMW_Offices_Raided_by_Authorities_in_Emissions-Cheating_Investigation__Published_2018_.jpeg" class="d-block w-100" alt="BMW Image">
+        <div class="carousel-caption d-block bg-primary bg-opacity-50">
+          <h2 class="text-white">BMW Company</h2>
+          <p class="text-white">Leading innovation and performance.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="./photos/upscalemedia-transformed (3).jpeg" class="d-block w-100" alt="Mercedes 2">
+        <div class="carousel-caption d-block bg-primary bg-opacity-50">
+          <h2 class="text-white">Mercedes</h2>
+          <p class="text-white">Model 2 – Creative and modern design.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="./photos/upscalemedia-transformed (2).jpeg" class="d-block w-100" alt="Mercedes 3">
+        <div class="carousel-caption d-block bg-primary bg-opacity-50">
+          <h2 class="text-white">Tesla</h2>
+          <p class="text-white">Model 3 – Advanced technology features.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="./photos/download__27_.jpeg" class="d-block w-100" alt="Luxury Car">
+        <div class="carousel-caption d-block bg-primary bg-opacity-50">
+          <h2 class="text-white">Hyundai</h2>
+          <p class="text-white">Model 4 – Maximum comfort and elegance.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+</div>
+
+
+
+<div class="position-fixed top-50 end-0 translate-middle-y me-3" style="z-index: 999;">
+  <a href="#" class="d-block mb-2  fs-1" style="color:#00b3d2">
+    <i  class="fa-brands fa-facebook"></i>
+  </a>
+ </a>
+  <a href="#" class="d-block mb-2  fs-1" style="color:#00b3d2">
+    <i    class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="#" class="d-block mb-2  fs-1" style="color:#00b3d2">
+    <i  class="fa-brands fa-twitter"></i>
+  
+
+   <a  href="#" class="d-block mb-2  fs-1" style="color:#00b3d2">
+    <i  class="fa-brands fa-linkedin"></i>
+  </a>
+  <a  href="#" class="d-block mb-2  fs-1" style="color:#00b3d2">
+    <i  class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+
+
+
+<div class="container-fluid bg-dark p-5" >
+
+<h1 style="color: rgb(0, 140, 255);">welcom</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos reiciendis sunt, rem tenetur consequatur, quae, exercitationem aperiam quia mollitia sit obcaecati iusto nisi? Voluptatibus ex quidem magnam ut, placeat atque.</p>
+<button class="p-2">Read More</button>
+
+</div>
+
+<hr>
+
+
+<div class="containe  ">
+
+<div class="container-fluid bg-dark  p-5" style="color: white; text-align: center;"> 
+
+<h1>Top Car Brands</h1>
+
+</div>
+
+<hr>
+
+
+<div class="accordion  " id="accordionExample ">
+  <div class="accordion-item bg-dark " style="color: white;">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button  bg-dark " style="color: white; font-size: 25px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        BMW
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+Overview:
+A German company founded in 1916, specialized in manufacturing luxury and sports cars. Known for high-quality production, powerful performance, and elegant designs.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item bg-dark " style="color: white;">
+    <h2 class="accordion-header "  id="headingTwo">
+      <button class="accordion-button collapsed bg-dark  "style="color: white; font-size: 25px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Mercedes-Benz
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Overview:
+A German company founded in 1926, one of the oldest and most famous manufacturers of <code>luxury cars and trucks in the world.</code> Known for comfort, technology, and luxury.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item bg-dark" style="color: white;">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed bg-dark" style="color: white; font-size: 25px;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+   Ferrari
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Overview:
+An Italian company founded in 1939,</strong> specialized in producing high-performance luxury sports cars. Considered a <code>global symbol of speed</code>, luxury, and excitement.
+      </div>
+    </div>
+  </div>
+</div>
+</div><!-- containe -->
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="containe pb-5 " style="background-color: #016fff88; border-radius: 10px;">
+<h1 class="p-3 text-center bg-dark " style="color: white; border-radius: 10px;">Translate from Arabic to English</h1>
+
+
+<h4 class="px-4 pt-3">Write and translate <span style="color: white;">please here</span> </h4>
+
+
+
+
+<!-- Button trigger modal -->
+<button id="copyBtn" type="button" class="btn btn-primary mx-4 mb-3" data-bs-placement="top" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  copy
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal">
+      </div>
+      <div class="modal-body " >
+       <p style="color: black;"> https://github.com/twbs/bootstrap </p>
+       
+       <p style="text-align: right; color: black;">تم نسخ النص</p>
+      </div>
+      <div class="modal-" style="text-align: right;">
+        <button type="button" class="btn btn-primary " style="padding: 3px 20px; border-radius: 0; margin-bottom: 20px; margin-right: 10px;"  data-bs-dismiss="modal">ok</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<div class="text m-auto  mx-4" >
+<textarea class="m-auto px-3 pt-2" name="" id="" placeholder="translate:" style="width: 90%; height: 150px; border-radius: 10px;"></textarea>
+
+</div>
+</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+<div class="containe pb-5 " style="background-color: #016fff88; border-radius: 10px;">
+<h1 class="p-3 text-center bg-dark " style="color: white; border-radius: 10px;">Translate from Arabic to French</h1>
+
+
+<h4 class="px-4 pt-3">Write and translate <span style="color: white;">please here</span></h4>
+
+
+
+
+<!-- Button trigger modal -->
+<button id="copyBtn" type="button" class="btn btn-primary mx-4 mb-3" data-bs-placement="top" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  copy
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal">
+      </div>
+      <div class="modal-body " >
+       <p style="color: black;"> https://github.com/twbs/bootstrap </p>
+       
+       <p style="text-align: right; color: black;">تم نسخ النص</p>
+      </div>
+      <div class="modal-" style="text-align: right;">
+        <button type="button" class="btn btn-primary " style="padding: 3px 20px; border-radius: 0; margin-bottom: 20px; margin-right: 10px;"  data-bs-dismiss="modal">ok</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<div class="text m-auto  mx-4" >
+<textarea class="m-auto px-3 pt-2" name="" id="" placeholder="translate:" style="width: 90%; height: 150px; border-radius: 10px;"></textarea>
+
+</div>
+</button>
+</div>
+
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="containe pb-5 " style="background-color: #016fff88; border-radius: 10px;">
+<h1 class="p-3 text-center bg-dark " style="color: white; border-radius: 10px;">Translate from Arabic to German</h1>
+
+
+<h4 class="px-4 pt-3">Write and translate <span style="color: white;">please here</span></h4>
+
+
+
+
+<!-- Button trigger modal -->
+<button id="copyBtn" type="button" class="btn btn-primary mx-4 mb-3" data-bs-placement="top" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  copy
+</button>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal">
+      </div>
+      <div class="modal-body " >
+       <p style="color: black;"> https://github.com/twbs/bootstrap </p>
+       
+       <p style="text-align: right; color: black;">تم نسخ النص</p>
+      </div>
+      <div class="modal-" style="text-align: right;">
+        <button type="button" class="btn btn-primary " style="padding: 3px 20px; border-radius: 0; margin-bottom: 20px; margin-right: 10px;"  data-bs-dismiss="modal">ok</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<div class="text m-auto  mx-4" >
+<textarea class="m-auto px-3 pt-2" name="" id="" placeholder="translate:" style="width: 90%; height: 150px; border-radius: 10px;"></textarea>
+
+</div>
+</button>
+</div>
+<hr>
+
+
+<div class="container-fluid" style="background-image: url(./photos/Omoda\ C5\ SUV\,\ press\ photo\,\ China\,\ 8_2023.jpeg); height: 350px; border-radius: 10px; background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;"  >
+
+</div>
+
+<div class="container-fluid bg-dark text-center">
+<h1 style="color: rgb(0, 149, 255); padding: 40px; font-size: 50px; border-radius: 10px;">popluar  cars in Egypt</h1>
+</div>
+
+
+
+<div class="containe ">
+
+<div class="d-flex row justify-content-center flex-wrap m-auto">
+
+
+<div class="cardd m-5 carstitel " style="width: 22rem; background-color: white;border-radius: 10px;">
+  <img height="470px" src="./photos/Chevrolet.jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+
+
+
+
+<div class="cardd m-5  carstitel " style="width: 22rem; background-color: white;border-radius: 10px;">
+  <img height="470px" src="./photos/download (3).jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+
+<div class="cardd m-5  carstitel " style="width: 22rem; background-color: white;border-radius: 10px;">
+  <img height="470px" src="./photos/download (9).jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+
+
+<div class="cardd m-5   carstitel " style="width: 22rem; background-color: white;border-radius: 10px;">
+  <img height="470px" src="./photos/download (11).jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3 ">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+
+<div class="cardd m-5  carstitel" style="width: 22rem; background-color: white; border-radius: 10px;">
+  <img height="470px" src="./photos/C63.jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+<div class="cardd m-5  carstitel" style="width: 22rem;background-color: white;border-radius: 10px;">
+  <img height="470px" src="./photos/Nouvelle 308.jpg" class="card-img-top" alt="...">
+  <div class="card-body  my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+<div class="cardd  px-3  carstitel" style="width: 22rem; margin: 50px 100px; background-color: white; border-radius: 10px;">
+  <img height="470px" height="470px" src="./photos/Автомобиль.jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+
+
+<div class="cardd  px-3  carstitel" style="width: 22rem; margin: 50px 100px; background-color: white; border-radius: 10px;">
+  <img height="470px" src="./photos/download (10).jpg" class="card-img-top" alt="...">
+  <div class="card-body my-3 mx-1 pb-3 ">
+    <div class="d-flex justify-content-between ">
+    <h5 class="card-title" >Card title</h5>
+    <a href="#" class="btn btn-primary"  >know More</a>
+    </div><!-- d-flex -->
+    <p class="card-text text-primary " >Some quick example text to build on the card title .</p>
+    
+  </div>
+</div>
+
+
+</div>
+
+</div><!-- d-flex -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style=" background-image: url(./photos/YangWang\ U9_\ The\ Chinese\ hypercar\ that\ costs\ a\ third\ of\ a\ Ferrari.jpeg); background-position: center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 350px;"  class="container-fluid">
+
+
+
+</div><!--cotainer  -->
+
+
+<hr>
+
+<div class="container-fluid bg-dark text-center">
+<h1 style="color: rgb(0, 149, 255); padding: 40px; font-size: 50px; border-radius: 10px;">Thanks For</h1>
+</div>
+
+<div class="container-fluid  bg-dark d-flex row justify-content-center  m-auto " >
+
+
+
+
+
+<div class="card col-lg-4 col-md-5 m-3 col-sm-6 col-10 col-xl-3" style="border-radius: 10px; border: 1px solid rgba(0, 234, 255, 0.319); height: 30rem; position: relative; overflow: hidden;">
+  
+  <div style="background-image: url('./photos/download (12).jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; filter: grayscale(1); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+  
+  <div class="card-body" style="position: relative; z-index: 1;">
+    <h5 class="card-text" style="color: white;  width: 100%; line-height: 35px;">All Thanks and appreciation <br>  <span style="font-size: 15px;"><i class="fa-regular fa-clock"></i> Ooctober 15, 2020</span></h5>
+  </div>
+  
+  <div class="content m-3" style="position: relative; z-index: 1; color: white;">
+    <img style="border-radius: 50%; border: 1px solid white; filter: none;" width="100" height="120" src="./photos/download (12).jpg" alt="">
+    <p>Eng. Ramy Ahmed <br> Director UI/UX</p>
+  </div>
+
+</div>
+
+
+
+
+<div class="card col-lg-4 col-md-5 m-3 col-sm-6 col-10 col-xl-3" style="border-radius: 10px; border: 1px solid rgba(0, 234, 255, 0.319); height: 30rem; position: relative; overflow: hidden;">
+  
+  <div style="background-image: url('./photos/imgggg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; filter: grayscale(1); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+  
+  <div class="card-body" style="position: relative; z-index: 1;">
+       <h5 class="card-text" style="color: white;  width: 100%; line-height: 35px;  ">All Thanks and appreciation <br>  <span style="font-size: 15px;"><i class="fa-regular fa-clock"></i> Ooctober 15, 2020</span></h5>
+  </div>
+  
+  <div class="content m-3" style="position: relative; z-index: 1; color: white;">
+    <img style="border-radius: 50%; border: 1px solid white; filter: none;" width="100" height="120" src="./photos/imgggg.jpg" alt="">
+    <p>Eng. Ramy Ahmed <br> Director UI/UX</p>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="card col-lg-4 col-md-5 m-3 col-sm-6 col-10 col-xl-3" style="border-radius: 10px; border: 1px solid rgba(0, 234, 255, 0.319); height: 30rem; position: relative; overflow: hidden;">
+  
+  <div style="background-image: url('./photos/download\ \(13\).jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; filter: grayscale(1); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+  
+  <div class="card-body" style="position: relative; z-index: 1;">
+    <h5 class="card-text" style="color: white;  width: 100%; line-height: 35px;">All Thanks and appreciation <br>  <span style="font-size: 15px;"><i class="fa-regular fa-clock"></i> Ooctober 15, 2020</span></h5>
+  </div>
+  
+  <div class="content m-3" style="position: relative; z-index: 1; color: white;">
+    <img style="border-radius: 50%; border: 1px solid white; filter: none;" width="100" height="120" src="./photos/download (13).jpg" alt="">
+    <p>Eng. Ramy Ahmed <br> Director UI/UX</p>
+  </div>
+
+</div>
+
+
+</div>
+<hr>
+<br><br>
+<h2 style="color: #07c6e8; text-align: center; font-size: 45px;">Cars Details</h2>
+
+
+<div class="container p-4">
+  <div class="row flex-md-row-reverse podcast-card lelele-1" style="border-radius: 7px;">
+    
+    <!-- الصورة -->
+    <div class="col-12 col-md-6 p-0 img-card-1"style="overflow: hidden;">
+      <div class="podcast-image w-100 h-100 " style="background-image: url('./photos/BMW\ M4\ Black.png');"></div>
+    </div>
+
+    <!-- الكلام -->
+    <div class="col-12 col-md-6 podcast-content p-5">
+      <h3>BMW</h3>
+      <p class="podcast-meta meta-1 mb-2">
+        <i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020
+      </p>
+      <p style="color: black; padding-top: 20px; padding-bottom: 50px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi facere dolores quae! Veniam consequatur eos omnis similique in alias! Eos, est? Reiciendis, ullam provident optio voluptates facilis animi, suscipit deserunt illum nam, placeat vel adipisci? Atque voluptate aut odit deleniti dicta, error, ea labore modi molestiae beatae minus ipsa!
+      </p>
+      <div class="mt-4 d-flex gap-2 flex-wrap">
+        <span class="btn-card"><i class="fas fa-microphone"></i> Podcast</span>
+        <span class="btn-card"><i class="fa-solid fa-clock"></i> 55 mins</span>
+        <button class="btn-card"><i class="fas fa-play"></i> Play Episode</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<br><br><br><br>
+
+<div class="container p-4">
+  <div class="row  podcast-card lelele-2 " style="border-radius: 7px; " >
+    
+    
+    <div class="col-md-6 p-0 img-card-2" style="overflow: hidden;   ;">
+      <div class="podcast-image w-100 h-100" style="background-image: url('./photos/download\ \(14\).jpg');"></div>
+    </div>
+
+    
+    <div class="col-md-6 podcast-content p-5">
+      <h3>Ferrari</h3>
+      <p class="podcast-meta  meta-2  mb-2">
+        <i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020
+      </p>
+   
+      <p style="color: black; padding-top: 20px; padding-bottom: 50px; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi facere dolores quae! Veniam consequatur eos omnis similique in alias! Eos, est? Reiciendis, ullam provident optio voluptates facilis animi, suscipit deserunt illum nam, placeat vel adipisci? Atque voluptate aut odit deleniti dicta, error, ea labore modi molestiae beatae minus ipsa!</p>
+      
+      <div class="mt-4 d-flex gap-2 flex-wrap">
+        <span class="btn-card " ><i class="fas fa-microphone"></i> Podcast</span>
+        <span class="btn-card "><i class="fa-solid fa-clock"></i> 55 mins</span>
+        <button class="btn-card  "><i class="fas fa-play"></i> Play Episode</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<br><br><br><br>
+<div class="container p-4">
+  <div class="row flex-md-row-reverse podcast-card lelele-1" style="border-radius: 7px;">
+    
+    <!-- الصورة -->
+    <div class="col-12 col-md-6 p-0 img-card-1" style="overflow: hidden;">
+      <div class="podcast-image w-100 h-100 " style="background-image: url('./photos/Discord\ -\ Group\ Chat\ That’s\ All\ Fun\ &\ Games.jpg');"></div>
+    </div>
+
+    <!-- الكلام -->
+    <div class="col-12 col-md-6 podcast-content p-5">
+      <h3>BMW</h3>
+      <p class="podcast-meta meta-1 mb-2">
+        <i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020
+      </p>
+      <p style="color: black; padding-top: 20px; padding-bottom: 50px;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi facere dolores quae! Veniam consequatur eos omnis similique in alias! Eos, est? Reiciendis, ullam provident optio voluptates facilis animi, suscipit deserunt illum nam, placeat vel adipisci? Atque voluptate aut odit deleniti dicta, error, ea labore modi molestiae beatae minus ipsa!
+      </p>
+      <div class="mt-4 d-flex gap-2 flex-wrap">
+        <span class="btn-card"><i class="fas fa-microphone"></i> Podcast</span>
+        <span class="btn-card"><i class="fa-solid fa-clock"></i> 55 mins</span>
+        <button class="btn-card"><i class="fas fa-play"></i> Play Episode</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br><br><br><br>
+
+
+
+<div class="container p-4">
+  <div class="row podcast-card lelele-2 " style="border-radius: 7px; " >
+    
+    
+    <div class="col-md-6 p-0 img-card-2" style="overflow: hidden;   ;">
+      <div class="podcast-image w-100 h-100" style="background-image: url('./photos/download\ \(16\).jpg');"></div>
+    </div>
+
+    
+    <div class="col-md-6 podcast-content p-5">
+      <h3>Lamborghini</h3>
+      <p class="podcast-meta  meta-2  mb-2">
+        <i class="fa-solid fa-calendar-days"></i> Mon, May 25th 2020
+      </p>
+   
+      <p style="color: black; padding-top: 20px; padding-bottom: 50px; ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque excepturi facere dolores quae! Veniam consequatur eos omnis similique in alias! Eos, est? Reiciendis, ullam provident optio voluptates facilis animi, suscipit deserunt illum nam, placeat vel adipisci? Atque voluptate aut odit deleniti dicta, error, ea labore modi molestiae beatae minus ipsa!</p>
+      
+      <div class="mt-4 d-flex gap-2 flex-wrap">
+        <span class="btn-card " ><i class="fas fa-microphone"></i> Podcast</span>
+        <span class="btn-card "><i class="fa-solid fa-clock"></i> 55 mins</span>
+        <button class="btn-card  "><i class="fas fa-play"></i> Play Episode</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="container m-auto  p-5">
+
+<div class="row justify-content-center">
+
+<div class="item d-flex flex-column justify-content-center text-center   col-lg-2 col-md-4 col-sm-6   m-3 " style=" color: white; background-color: rgb(0, 0, 0);" >
+  
+<h4 class="pt-3">Subscribe Now</h4>
+<img style="display: block;margin: auto; filter:drop-shadow(0 0 20px rgb(255, 0, 238)) " width="100" height="100" src="./photos/instegram-removebg-preview.png" alt="">
+<h4 class="pt-2" >Go To Linke</h4>
+</div>
+
+
+<div class="item d-flex flex-column justify-content-center text-center col-lg-2 col-md-4 col-sm-6   m-3 "style=" color: white; background-color: rgb(0, 0, 0);" >
+  
+<h4 class="pt-3">Subscribe Now</h4>
+<img style="display: block;margin: auto; filter:drop-shadow(0 0 20px rgb(0, 255, 34)) " width="100" height="100" src="./photos/download__18_-removebg-preview.png" alt="">
+<h4 class="pt-2" >Go To Linke</h4>
+</div>
+
+
+<div class="item d-flex flex-column justify-content-center text-center  col-lg-2 col-md-4 col-sm-6   m-3 " style=" color: white; background-color: rgb(0, 0, 0);">
+  
+<h4 class="pt-3">Subscribe Now</h4>
+<img style="display: block;margin: auto; filter:drop-shadow(0 0 20px rgb(0, 149, 255)) " width="100" height="100" src="./photos/download__19_-removebg-preview.png" alt="">
+<h4 class="pt-2" >Go To Linke</h4>
+</div>
+
+
+<div class="item d-flex flex-column justify-content-center text-center   col-lg-2 col-md-4 col-sm-6   m-3 " style=" color: white; background-color: rgb(0, 0, 0);" >
+  
+<h4 class="pt-3">Subscribe Now</h4>
+<img style="display: block;margin: auto; filter:drop-shadow(0 0 20px rgb(0, 30, 255)) " width="100" height="100" src="./photos/linked in.png" alt="">
+<h4 class="pt-2" >Go To Linke</h4>
+</div>
+
+
+
+</div><!-- row -->
+
+
+</div><!-- container -->
+
+
+
+<div class="container-fluid p-3 m-0 " style="background-color: black;">
+
+  <div class="d-flex row">
+
+<div class="col-xl-4 col-lg-4 col-md-6 p-4">
+<div class="d-flex  justify-content-center" style="align-items: center; border-top: 1px solid white;border-bottom: 1px solid white; padding: 10px; ">
+
+<img class="m-3" width="100px" style="border-radius: 50%;" height="100px" src="./photos/Black Background Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="">
+<h3 style="color: white;">Good Company</h3>
+</div>
+<div class="text-center pt-4">
+    <p>Tel : 000-000-000</p>
+     <p>Address : EGYPT</p>
+    <p>Fax : 000-000-000</p>
+
+</div><!-- text-center -->
+
+
+
+</div>
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-6 p-4">
+<div class="d-flex  justify-content-center" style="align-items: center; border-top: 1px solid white;border-bottom: 1px solid white; padding: 10px; ">
+
+<img class="m-3" width="100px" style="border-radius: 50%;" height="100px" src="./photos/Black Background Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="">
+<h3 style="color: white;">Important links</h3>
+</div>
+<div class="text-center  pt-4">
+      
+            <p> <a class="linke-footer" href="#">Visit Us</a></p> 
+          <p> <a class="pe-4 linke-footer" href="#">Take a look</a></p> 
+             <p> <a class="linke-footer" href="#">Your health is more important</a></p> 
+</div><!-- text-center -->
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-xl-4 col-lg-4 col-md-6 p-4">
+<div class="d-flex  justify-content-center" style="align-items: center; border-top: 1px solid white;border-bottom: 1px solid white; padding: 10px; ">
+
+<img class="m-3" width="100px" style="border-radius: 50%;" height="100px" src="./photos/Black Background Photos - Download Free High-Quality Pictures _ Freepik.jpeg" alt="">
+<h3 style="color: white;">Vision</h3>
+</div>
+<div class="text-center pt-4">
+   
+            <p>Serveices for all</p>
+            <p>Provide best serveices</p>
+            <p>you will be better than before</p>
+
+</div><!-- text-center -->
+
+
+
+</div>
+</div><!-- d-flex row -->
+
+<div class="line text-center p-4" style="border-top: 2px solid white;   border-bottom: 2px solid white;">
+<h4 style="color: white;">   COPYRIGHT © 2020 SHIMAAHUSSIEN EL SAID. GOOD COMPANY. ALL RIGHTS</h4>
+</div>
+
+<br><br><br><br>
+</div><!-- container-fluid -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+
+<script>
+const btn = document.getElementById("copyBtn");
+const tooltip = bootstrap.Tooltip.getOrCreateInstance(btn);
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("data-bs-original-title", "Copied");
+  tooltip.show();
+
+  setTimeout(() => {
+    btn.setAttribute("data-bs-original-title", "Copy");
+    tooltip.hide();
+  }, 1000);
+});
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
